@@ -710,6 +710,10 @@ export default {
                             moduleElement.div.style.float = align;
                             continue;
                         }
+                        if (/^\./.test(button)) {
+                            moduleElement.div.classList.add(button.substr(1));
+                            continue;
+                        }
                         
                         // more button
                         if (/^\:/.test(button)) {
